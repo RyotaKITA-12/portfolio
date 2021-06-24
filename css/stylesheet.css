@@ -1,6 +1,3 @@
-html    {
-    font-size:62.5%;
-}
 header  {
     font-size: 15px;
     width:auto;
@@ -12,7 +9,7 @@ header  {
     top: 5px;
     position: absolute;
     border: 2px dashed #303030;
-    width: 100%;
+    width: 97%;
 }
 .nav-list   {
     list-style: none;
@@ -48,25 +45,46 @@ header  {
 }
 body    {
     background-color: #101010;
-    color: #b0b0b0;
+    color: #bbbbbb;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.commandline    {
+    padding: 10px 5px;
+    text-align: left;
+    font-size: 18px;
+    color: #bbbbbb;
+}
+.head-command   {
+    color: #73be37;
+}
+.cursor {
+    color: #f5b47d;
+}
+.command-br {
+    display: block;
+    content: "";
+    margin: 5px 0;
+}
+.command-pages  {
+    padding: 0px 15px;
+    color: #fffac8;
+}
+.command-page   {
+    padding: 0px 20px 0px 0px;
+    text-decoration: none;
+    color: #afd2ff;
+}
+.command-page:hover   {
+    text-decoration: underline;
+}
 .left   {
-    width: 25%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 100px;
-    padding: 100px 0;
+    float: left;
+    width: 50%;
 }
 .right  {
-    width: 90%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 25%;
-    padding: 125px 0;
+    float: right;
+    width: 50%;
 }
 h1  {
     font-size: 40px;
@@ -74,7 +92,7 @@ h1  {
     text-align: center;
     margin: 0;
 }
-br  {
+.right br  {
     display: block;
     content: "";
     margin: 50px 0;
@@ -92,14 +110,64 @@ ul   {
 .link-icon p{
     text-align: center;
 }
-footer  {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    color: #dadada;
-    background-color: #444444;
+.null {
+    padding:125px
 }
-footer>p    {
-    text-align: left;
-    margin: 10px;
+hr {
+    width: 100%;
+    margin: 15px 0;
+}
+.about  {
+    text-align: center;
+}
+.univinfo {
+    padding: 0 20px;
+}
+.univinfo {
+    font-size: 20px;
+}
+.heading {
+    padding:15px 0;
+}
+.skill1 {
+    list-style-type: none;
+    float: left;
+    width: 50%;
+    font-size: 20px;
+}
+.skill2 {
+    list-style-type: none;
+    float: right;
+    width: 50%;
+    font-size: 20px;
+}
+.interest1 {
+    float: left;
+    width: 33.3%;
+}
+.interest1 img {
+    margin: 0 10%;
+    width: 30%;
+}
+.interest1 p {
+    font-size: 15px;
+    text-align: center;
+}
+.work img {
+    margin: 0 10%;
+    width: 50%;
+}
+.work h2    {
+    font-size: 27px;
+}
+.work h3    {
+    font-size: 22px;
+}
+.work p {
+    font-size: 15px;
+    text-align: center;
+}
+.works hr{
+    /* border: 2px dashed #303030; */
+    border: 3px dotted #505050;
 }

@@ -13,53 +13,125 @@
             <nav>
                 <hr class="head-border">
                 <ul class="nav-list">
-                    <a href="#" class="nav-dir"><li>~/pages/Kita's_Portfolio/</li></a>
-                    <a href="#" class="nav-dir"><li>Home</li></a>
-                    <!-- <a href="#about" class="nav-dir"><li>/About</li></a> -->
-                    <!-- <a href="#works" class="nav-dir"><li>/Works</li></a> -->
-                    <!-- <a href="#contact" class="nav-dir"><li>/Contact</li></a> -->
-                    <a href="#contact" class="nav-system"><li>　|　</li></a>
+                    <a href="#" class="nav-dir"><li>~/Portfolio/pages/Home/</li></a>
+                    <!-- <a href="#" class="nav-dir"><li>About</li></a> -->
+                    <a href="#contact" class="nav-system"><li>　| </li></a>
                     <a href="#contact" class="nav-git"><li>master　</li></a>
                     <span id="view-time" class="nav-time"></span>
                 </ul>
             </nav>
         </div>
+        <div class="commandline">
+            <span class="head-command">></span>
+            <span class="command">cd ../</span>
+            <span class="cursor">_</span>
+            <br class="command-br">
+            <span class="command-pages"> -- pages -- </span>
+            <br class="command-br">
+            <a href="#about" class="command-page">About/</a>
+            <a href="#skills" class="command-page">Skills/</a>
+            <a href="#interest" class="command-page">interest/</a>
+            <a href="#works" class="command-page">Works/</a>
+            <!-- <a href="#contact" class="command-page">Contact/</a> -->
+        </div>
     </header>
 
     <main>
+        <hr>
         <section class="top">
             <div class="left">
                 <img src="./img/icon.png" alt="face-icon" width="200">
             </div>
             <div class="right">
                 <ul class="link-icon">
-                <h1>KITA Ryota</h1><br>
+                <h1>KITA Ryota</h1>
+                <br>
                     <li>
                         <a href="https://github.com/RyotaKITA-12" target="_blank">
-                            <img src="img/Github.png" alt="./github_icon">
+                            <img src="./img/link/Github.png" alt="github_icon">
                         </a>
                     </li>
                     <li>
                         <a href="https://qiita.com/kita_ds12" target="_blank">
-                            <img src="./img/Qiita.png" alt="qiita_icon">
+                            <img src="./img/link/Qiita.png" alt="qiita_icon">
                         </a>
                     </li>
                     <li>
                         <a href="https://twitter.com/ryota_20012" target="_blank">
-                            <img src="./img/Twitter.png" alt="twitter_icon">
+                            <img src="./img/link/Twitter.png" alt="twitter_icon">
                         </a>
                     </li>
                 </ul>
             </div>
         </section>
-        <section class="about">
+        <div class="null"></div>
+        <hr>
+        <section id="about" class="about">
+            <h1 class="heading">ABOUT ME</h1>
+            <span class="univinfo">Musashino Univ.</span>
+            <span class="univinfo">DataScience</span>
         </section>
-        <section class="works">
+        <hr>
+        <section id="skills" class="skills">
+            <h1 class="heading">SKILLS</h1>
+            <ul class=skill1>
+                <li>C</li>
+                <li>Java</li>
+                <li>Python</li>
+                <li>HTML/CSS</li>
+                <li>JavaScript</li>
+            </ul>
+            <ul class="skill2">
+                <li>Git</li>
+                <li>SQL</li>
+                <li>Twitter API</li>
+                <li>Google Custom Search API</li>
+                <li>Google Apps Script</li>
+            </ul>
+        </section>
+        <hr>
+        <section id="interest" class="interest">
+            <h1 class="heading">INTEREST</h1>
+            <div class="interest1">
+                <img src="./img/interest/NLP.png" alt="NLP">
+                <p>Natural<br>Language Processing</p>
+                <img src="./img/interest/GAME.png" alt="GAME">
+                <p>Game Development</p>
+            </div>
+            <div class="interest1">
+                <img src="./img/interest/PLP.png" alt="PLP">
+                <p>Programming<br>Language Processing</p>
+                <img src="./img/interest/illustration.png" alt="illustration">
+                <p>Illustration</p>
+            </div>
+            <div class="interest1">
+                <img src="./img/interest/WEB.png" alt="WEB">
+                <p>Web Design<br>&nbsp;</p>
+                <img src="./img/interest/education.png" alt="education">
+                <p>Education</p>
+            </div>
+        </section>
+        <hr>
+        <section id="works" class="works">
+            <h1 class="heading">WORKS</h1>
+            <div class="work">
+                <h2>2020-06</h2>
+                <h3>共起ネットワークを用いた<br>新型コロナウイルスに関するツイートの可視化</h3>
+                <p>稲荷太良　池上藍羽　石井雄大　北椋太　中西崇文</p>
+                <img src="./img/work/covid/07.png" alt="07">
+            </div>
+            <hr>
+            <div class="work">
+                <h2>2021-01</h2>
+                <h3>テキストデータを対象とした<br>文章における特有表現に着目した<br>意見抽出方式</h3>
+                <p>池上藍羽　石井雄大　北椋太　中西崇文</p>
+                <img src="./img/work/opinion.png" alt="opinion">
+            </div>
         </section>
         <section class="contact">
         </section>
     </main>
-
+    <hr>
     <footer>
         <p>&copy; 2021 Ryota KITA.</p>
     </footer>

@@ -71,6 +71,7 @@ body    {
     color: #fffac8;
 }
 .command-page   {
+    font-size: clamp(12px, 2vw, 20px);
     padding: 0px 20px 0px 0px;
     text-decoration: none;
     color: #afd2ff;

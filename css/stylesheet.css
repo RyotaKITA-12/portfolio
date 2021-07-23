@@ -71,7 +71,8 @@ body    {
     color: #fffac8;
 }
 .command-page   {
-    font-size: clamp(12px, 2vw, 20px);
+    font-size: 20px;
+    /* font-size: clamp(19px, 2vw, 20px); */
     padding: 0px 20px 0px 0px;
     text-decoration: none;
     color: #afd2ff;
@@ -83,12 +84,21 @@ body    {
     float: left;
     width: 50%;
 }
+.left img   {
+    width: clamp(120px, 13vw, 180px);
+}
+ul   {
+    padding: 0px;
+}
+
+}
 .right  {
     float: right;
     width: 50%;
 }
 h1  {
-    font-size: 40px;
+    font-size: clamp(30px, 4vw, 50px);
+    /* font-size: 40px; */
     color: #dadada;
     text-align: center;
     margin: 0;
@@ -106,13 +116,13 @@ ul   {
 	padding: 20px;
 }
 .link-icon img  {
-    width: 50px;
+    width: clamp(36px, 5vw, 60px);
 }
 .link-icon p{
     text-align: center;
 }
 .null {
-    padding:125px
+    padding:5px
 }
 hr {
     width: 100%;
@@ -122,10 +132,8 @@ hr {
     text-align: center;
 }
 .univinfo {
-    padding: 0 20px;
-}
-.univinfo {
-    font-size: 20px;
+    padding: 0 10px;
+    font-size: clamp(10px, 3vw, 25px);
 }
 .heading {
     padding:15px 0;
@@ -134,13 +142,13 @@ hr {
     list-style-type: none;
     float: left;
     width: 50%;
-    font-size: 20px;
+    font-size: clamp(10px, 3vw, 25px);
 }
 .skill2 {
     list-style-type: none;
     float: right;
     width: 50%;
-    font-size: 20px;
+    font-size: clamp(10px, 3vw, 25px);
 }
 .interest1 {
     float: left;
@@ -148,15 +156,18 @@ hr {
 }
 .interest1 img {
     margin: 0 10%;
-    width: 30%;
+    width: clamp(50px, 7vw, 150px);
+    /* width: 30%; */
 }
 .interest1 p {
-    font-size: 15px;
+    font-size: clamp(12px, 2vw, 25px);
+    /* font-size: 15px; */
     text-align: center;
 }
 .work img {
     margin: 0 10%;
-    width: 50%;
+    width: clamp(350px, 50vw, 550px);
+    /* width: 50%; */
 }
 .work h2    {
     font-size: 27px;

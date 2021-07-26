@@ -86,8 +86,8 @@ a.anchor{
     color: #fffac8;
 }
 .command-page   {
-    font-size: 20px;
-    /* font-size: clamp(19px, 2vw, 20px); */
+    /* font-size: 15px; */
+    font-size: clamp(15px, 3vw, 20px);
     padding: 0px 20px 0px 0px;
     text-decoration: none;
     color: #afd2ff;
@@ -204,4 +204,22 @@ hr {
 .works hr{
     /* border: 2px dashed #303030; */
     border: 3px dotted #505050;
+}
+p.keyword    {
+    font-size: clamp(10px, 2vw, 15px);
+}
+.certifications p   {
+    font-size: clamp(10px, 2vw, 25px);
+}
+.certification1 {
+    list-style-type: none;
+    float: left;
+    width: 50%;
+    font-size: clamp(10px, 2vw, 25px);
+}
+.certification2 {
+    list-style-type: none;
+    float: right;
+    width: 50%;
+    font-size: clamp(10px, 2vw, 25px);
 }

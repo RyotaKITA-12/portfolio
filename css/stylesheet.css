@@ -191,7 +191,8 @@ hr {
 }
 .work img {
     margin: 0 10%;
-    width: clamp(350px, 40vw, 550px);
+    /* width: clamp(350px, 40vw, 550px); */
+    height: clamp(350px, 40vw, 550px);
     /* width: 50%; */
 }
 .work h2    {

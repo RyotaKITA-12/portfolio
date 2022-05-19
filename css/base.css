@@ -102,24 +102,47 @@ main {
 }
 .about-yellow {
   color: #afae8b;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
 }
 .about-gray {
   color: #808080;
-  font-size: 16px;
+  font-size: 12px;
 }
 .about-white {
   color: #bbb;
-  font-size: 16px;
+  font-size: 12px;
 }
 .about-purple {
   color: #a368f6;
-  font-size: 18px;
+  font-size: 14px;
 }
 .about-green {
   color: #9de949;
-  font-size: 16px;
+  font-size: 12px;
+}
+@media only screen and (min-width:651px) {
+    .about-yellow {
+      color: #afae8b;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .about-gray {
+      color: #808080;
+      font-size: 16px;
+    }
+    .about-white {
+      color: #bbb;
+      font-size: 16px;
+    }
+    .about-purple {
+      color: #a368f6;
+      font-size: 18px;
+    }
+    .about-green {
+      color: #9de949;
+      font-size: 16px;
+    }
 }
 #skills {
     padding-top: 130px;
@@ -147,11 +170,21 @@ main {
 }
 .news-purple {
   color: #a368f6;
-  font-size: 14px;
+  font-size: 12px;
 }
 .news-blue {
   color: #afd2ff;
-  font-size: 16px;
+  font-size: 12px;
+}
+@media only screen and (min-width:651px) {
+    .news-purple {
+      color: #a368f6;
+      font-size: 14px;
+    }
+    .news-blue {
+      color: #afd2ff;
+      font-size: 16px;
+    }
 }
 #works {
     padding-top: 130px;
@@ -159,25 +192,49 @@ main {
 }
 .works-yellow {
   color: #afae8b;
-  font-size: 14px;
+  font-size: 12px;
 }
 .works-gray {
   color: #808080;
-  font-size: 14px;
+  font-size: 10px;
 }
 .works-white {
   color: #bbb;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
 }
 .works-purple {
   color: #a368f6;
-  font-size: 14px;
+  font-size: 12px;
 }
 .works-green {
   color: #9de949;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
+}
+@media only screen and (min-width:651px) {
+    .works-yellow {
+      color: #afae8b;
+      font-size: 14px;
+    }
+    .works-gray {
+      color: #808080;
+      font-size: 14px;
+    }
+    .works-white {
+      color: #bbb;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .works-purple {
+      color: #a368f6;
+      font-size: 14px;
+    }
+    .works-green {
+      color: #9de949;
+      font-size: 16px;
+      font-weight: bold;
+    }
 }
 .works-img {
     width: 350px;

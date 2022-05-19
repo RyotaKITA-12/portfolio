@@ -181,6 +181,7 @@ main {
 }
 .works-img {
     width: 350px;
+    padding-top: 15px;
 }
 
 .fadein {

@@ -248,11 +248,11 @@ main {
 @keyframes fadein {
     100% {  opacity: 1;}
 }
-.timing1 {animation-delay: 0.3s;}
-.timing2 {animation-delay: 0.8s;}
-.timing3 {animation-delay: 1.6s;}
-.timing4 {animation-delay: 1.8s;}
-.timing5 {animation-delay: 2.0s;}
-.timing6 {animation-delay: 2.2s;}
-.timing7 {animation-delay: 2.4s;}
-.timing8 {animation-delay: 2.6s;}
+.timing1 {animation-delay: 0.1s;}
+.timing2 {animation-delay: 0.5s;}
+.timing3 {animation-delay: 1.0s;}
+.timing4 {animation-delay: 1.2s;}
+.timing5 {animation-delay: 1.4s;}
+.timing6 {animation-delay: 1.6s;}
+.timing7 {animation-delay: 1.8s;}
+.timing8 {animation-delay: 2.0s;}

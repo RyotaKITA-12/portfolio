@@ -11,6 +11,7 @@
 
         <v-main>
             <v-container style="padding: 25px;">
+                <News v-if="page === 'NEWS'" />
                 <Skills v-if="page === 'SKILLS'" />
                 <Works v-if="page === 'WORKS'" />
             </v-container>
@@ -19,12 +20,14 @@
 </template>
 
 <script>
+import News from '@/components/News'
 import Skills from '@/components/Skills'
 import Works from '@/components/Works'
 
 export default {
     name: 'Home',
     components: {
+        News,
         Skills,
         Works,
     },

@@ -1,197 +1,67 @@
 <template>
     <v-app>
-        <div style="margin-top: 40px; margin-bottom: 20px;">
-            <p class="text-h5 font-weight-bold cyan--text">2022</p>
-            <v-divider color="cyan" />
-        </div>
-        <v-row align-content="center">
-            <div v-for="content in contents2022" :key="content">
-                <v-col>
-                    <v-card height="250" width="265" :color="content.color">
-                        <v-img :src="require(`@/assets/works/${content.image}`)" contain="true" height="155" />
-                        <v-card-title>
-                            <v-icon style="margin-right: 10px; margin-left: -5px; margin-top: -7px;">
-                                {{ content.icon }}
-                            </v-icon>
-                            {{ content.title }}
-                        </v-card-title>
-                        <v-card-subtitle> {{ content.story }} </v-card-subtitle>
-                    </v-card>
-                </v-col>
-            </div>
-        </v-row>
-        <div style="margin-top: 40px; margin-bottom: 20px;">
-            <p class="text-h5 font-weight-bold cyan--text">2021</p>
-            <v-divider color="cyan" />
-        </div>
-        <v-row align-content="center">
-            <div v-for="content in contents2021" :key="content">
-                <v-col>
-                    <v-card height="250" width="265" :color="content.color">
-                        <v-img :src="require(`@/assets/works/${content.image}`)" contain="true" height="155" />
-                        <v-card-title>
-                            <v-icon style="margin-right: 10px; margin-left: -5px; margin-top: -7px;">
-                                {{ content.icon }}
-                            </v-icon>
-                            {{ content.title }}
-                        </v-card-title>
-                        <v-card-subtitle> {{ content.story }} </v-card-subtitle>
-                    </v-card>
-                </v-col>
-            </div>
-        </v-row>
-        <div style="margin-top: 40px; margin-bottom: 20px;">
-            <p class="text-h5 font-weight-bold cyan--text">2020</p>
-            <v-divider color="cyan" />
-        </div>
-        <v-row align-content="center">
-            <div v-for="content in contents2020" :key="content">
-                <v-col>
-                    <v-card height="250" width="265" :color="content.color">
-                        <v-img :src="require(`@/assets/works/${content.image}`)" contain="true" height="155" />
-                        <v-card-title>
-                            <v-icon style="margin-right: 10px; margin-left: -5px; margin-top: -7px;">
-                                {{ content.icon }}
-                            </v-icon>
-                            {{ content.title }}
-                        </v-card-title>
-                        <v-card-subtitle> {{ content.story }} </v-card-subtitle>
-                    </v-card>
-                </v-col>
-            </div>
-        </v-row>
-        <div style="margin-top: 40px; margin-bottom: 20px;">
-            <p class="text-h5 font-weight-bold cyan--text">2019</p>
-            <v-divider color="cyan" />
-        </div>
-        <v-row align-content="center">
-            <div v-for="content in contents2019" :key="content">
-                <v-col>
-                    <v-card height="250" width="265" :color="content.color">
-                        <v-img :src="require(`@/assets/works/${content.image}`)" contain="true" height="155" />
-                        <v-card-title>
-                            <v-icon style="margin-right: 10px; margin-left: -5px; margin-top: -7px;">
-                                {{ content.icon }}
-                            </v-icon>
-                            {{ content.title }}
-                        </v-card-title>
-                        <v-card-subtitle> {{ content.story }} </v-card-subtitle>
-                    </v-card>
-                </v-col>
-            </div>
-        </v-row>
+        <v-timeline v-for="item in items" :key="item.text" align-top dense>
+            <v-timeline-item color="teal lighten-3" small>
+                <v-row class="pt-1">
+                    <v-col cols="3">
+                        <p class="indigo--text text--lighten-4"><strong>{{ item.time }}</strong></p>
+                    </v-col>
+                    <v-col>
+                        <a :href="item.link">
+                            <p class="light-blue--text text--lighten-3"><strong>{{ item.text }}</strong></p>
+                        </a>
+                    </v-col>
+                </v-row>
+            </v-timeline-item>
+        </v-timeline>
     </v-app>
 </template>
 
 <script>
 export default {
     data: () => ({
-        contents2022: [
+        items: [
             {
-                title: "CurriCreate",
-                story: "データベースデザイン 課題",
-                image: "curriculum.png",
-                icon: "mdi-school",
-                color: "indigo darken-1",
+                time: "2022-08-29",
+                text: "データサイエンス学部生がオンラインハッカソンにて優秀賞を受賞",
+                link: "https://www.musashino-u.ac.jp/news/20220829-02.html",
             },
             {
-                title: "FU-CALENDAR",
-                story: "技育展2022 (株式会社サポーターズ)",
-                image: "fu-calendar.png",
-                icon: "mdi-calendar",
-                color: "indigo darken-1",
+                time: "2022-06-22",
+                text: "データサイエンス学部３年生がオンラインハッカソンにて努力賞を受賞",
+                link: "https://www.musashino-u.ac.jp/news/20220622-02.html",
             },
             {
-                title: "preGen",
-                story: "技育CAMP オンライン開発合宿 ...",
-                image: "pregen.png",
-                icon: "mdi-presentation",
-                color: "indigo darken-1",
+                time: "2022-03-30",
+                text: "【武蔵野大学】ヤフー主催の学生ハッカソンイベントにてデータサイエンス学部生が優秀賞を受賞！ - PRTIMES",
+                link: "https://prtimes.jp/main/html/rd/p/000000090.000067788.html",
             },
             {
-                title: "Hack-a-Matcher",
-                story: "技育CAMP オンライン開発合宿 ...",
-                image: "hack-a-matcher.png",
-                icon: "mdi-link-variant",
-                color: "indigo darken-1",
+                time: "2022-03-24",
+                text: "【武蔵野大学】データサイエンス学部１・３年生３名が「情報処理学会 第84回全国大会」で「学生奨励賞」を受賞 - PRTIMES",
+                link: "https://prtimes.jp/main/html/rd/p/000000087.000067788.html",
             },
             {
-                title: "FU CALENDAR",
-                story: "技育CAMP オンライン開発合宿 ...",
-                image: "fucalendar.png",
-                icon: "mdi-calendar",
-                color: "indigo darken-1",
-            },
-        ],
-        contents2021: [
-            {
-                title: "Gazeat",
-                story: "Open Hack U 2021 Online Vol.4",
-                image: "gazeat.png",
-                icon: "mdi-puzzle",
-                color: "indigo darken-1",
+                time: "2021-10-01",
+                text: "【武蔵野大学】学生対象のアプリ開発イベント『技育CAMP』にてデータサイエンス学部生の３チームが「努力賞」を受賞 - PRTIMES",
+                link: "https://prtimes.jp/main/html/rd/p/000000062.000067788.html",
             },
             {
-                title: "ソースコードの構文...",
-                story: "DEIM2022 第14回データ工学と情...",
-                image: "tree.png",
-                icon: "mdi-xml",
-                color: "teal darken-1",
+                time: "2021-09-24",
+                text: "【武蔵野大学】今夏開催のアプリ開発イベントにてデータサイエンス学部生が優勝！ - PRTIMES",
+                link: "https://prtimes.jp/main/html/rd/p/000000060.000067788.html",
             },
             {
-                title: "カッコウ探索アルゴ...",
-                story: "情報処理学会 第84回全国大会",
-                image: "cuckoo.png",
-                icon: "mdi-bird",
-                color: "teal darken-1",
+                time: "2020-02-14",
+                text: "愛知県高等学校職業教育技術認定事業グランプリ受賞",
+                link: "https://www.chubu-ichi.ed.jp/main/news/6802/",
             },
-            {
-                title: "もぐもぐ",
-                story: "技育CAMP オンライン開発合宿 ...",
-                image: "mogumogu.png",
-                icon: "mdi-food",
-                color: "indigo darken-1",
-            },
-            {
-                title: "金魚すくわれ",
-                story: "お盆deハッカソン (株式会社 TeckB...",
-                image: "kingyo.png",
-                icon: "mdi-fish",
-                color: "indigo darken-1",
-            },
-            {
-                title: "筋トレドリーム",
-                story: "技育CAMP オンライン開発合宿 ...",
-                image: "pushup.png",
-                icon: "mdi-weight-lifter",
-                color: "indigo darken-1",
-            },
-        ],
-        contents2020: [
-            {
-                title: "テキストデータを対...",
-                story: "情報処理学会 第83回全国大会",
-                image: "opinion.png",
-                icon: "mdi-message-processing",
-                color: "teal darken-1",
-            },
-            {
-                title: "共起ネットワークを...",
-                story: "武蔵野大学オープンキャンパス202...",
-                image: "covid.png",
-                icon: "mdi-share-variant",
-                color: "teal darken-1",
-            },
-        ],
-        contents2019: [
-            {
-                title: "MESHを用いた文化祭...",
-                story: "一高発表会2019",
-                image: "mesh.jpeg",
-                icon: "mdi-poll",
-                color: "teal darken-1",
-            },
-        ],
+        ]
     }),
 }
 </script>
+<style>
+a {
+    text-decoration: none;
+}
+</style>

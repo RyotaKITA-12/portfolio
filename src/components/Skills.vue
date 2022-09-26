@@ -1,9 +1,9 @@
 <template>
     <v-app>
         <v-row align-content="center">
-            <div v-for="skill in mainSkills" :key="skill.title">
-                <v-col>
-                    <v-card elevation="0" class="mt-2 mb-6 mx-1" style="padding: 20px;">
+            <div v-for="skill in skills" :key="skill.title">
+                <v-col v-if="skill.scale == 'main'">
+                    <v-card elevation="0" color="grey darken-4" width="100%" style="padding: 20px;">
                         <v-row align-content="center">
                             <v-col cols="3">
                                 <v-progress-circular :rotate="-90" :size="160" :width="10" :value=skill.value
@@ -12,14 +12,12 @@
                                         <p
                                             class="pb-0 ma-0 text-h7 black--text text-center text--secondary font-weight-bold">
                                             {{ skill.title }}
-                                            <br>
-                                            {{ skill.subtitle }}
                                         </p>
                                     </div>
                                 </v-progress-circular>
                             </v-col>
                             <v-col cols="6">
-                                <v-list nav dense disabled>
+                                <v-list nav dense disabled color="grey darken-4">
                                     <v-list-item-group color="primary">
                                         <v-list-item v-for="outline in skill.outlines" :key="outline.title">
                                             <v-list-item-icon>
@@ -36,7 +34,7 @@
                             <v-col cols="12">
                                 <v-row align-content="center">
                                     <div v-for="item in skill.items" key="item.title">
-                                        <v-chip class="ma-2" color="teal" outlined>
+                                        <v-chip class="ma-2" color="teal lighten-2" outlined>
                                             <v-icon left>
                                                 {{ item.icon }}
                                             </v-icon>
@@ -48,6 +46,35 @@
                         </v-row>
                     </v-card>
                 </v-col>
+                <v-col v-if="skill.scale == 'sub'">
+                    <v-card elevation="0" style="padding: 20px;">
+                        <v-row align-content="center">
+                            <v-progress-circular :rotate="-90" :size="160" :width="10" :value=skill.value
+                                color="cyan darken-3">
+                                <div class="d-flex flex-column black--text ">
+                                    <p
+                                        class="pb-0 ma-0 text-h7 black--text text-center text--secondary font-weight-bold">
+                                        {{ skill.title }}
+                                        <br>
+                                        {{ skill.subtitle }}
+                                    </p>
+                                </div>
+                            </v-progress-circular>
+                            <v-list nav dense disabled>
+                                <v-list-item-group color="primary">
+                                    <v-list-item v-for="item in skill.items" key="item.title">
+                                        <v-chip class="ma-2" color="teal darken-1" outlined>
+                                            <v-icon left>
+                                                {{ item.icon }}
+                                            </v-icon>
+                                            {{ item.title }}
+                                        </v-chip>
+                                    </v-list-item>
+                                </v-list-item-group>
+                            </v-list>
+                        </v-row>
+                    </v-card>
+                </v-col>
             </div>
         </v-row>
     </v-app>
@@ -56,8 +83,9 @@
 <script>
 export default {
     data: () => ({
-        mainSkills: [
+        skills: [
             {
+                scale: "main",
                 title: "Python",
                 value: 100,
                 outlines: [
@@ -222,6 +250,7 @@ export default {
                 ],
             },
             {
+                scale: "main",
                 title: "Go",
                 value: 75,
                 outlines: [
@@ -235,6 +264,14 @@ export default {
                     },
                     {
                         title: "Machine Learning / DeepLearning",
+                        icon: "mdi-brain",
+                    },
+                    {
+                        title: "tensorflow",
+                        icon: "mdi-brain",
+                    },
+                    {
+                        title: "onnx",
                         icon: "mdi-brain",
                     },
                     {
@@ -267,9 +304,14 @@ export default {
                         title: "kagome",
                         icon: "mdi-text-box-outline",
                     },
+                    {
+                        title: "gocv",
+                        icon: "mdi-image",
+                    },
                 ]
             },
             {
+                scale: "main",
                 title: "JavaScript",
                 value: 55,
                 outlines: [
@@ -310,10 +352,18 @@ export default {
                 ]
             },
             {
+                scale: "sub",
                 title: "C",
                 value: 35,
+                items: [
+                    {
+                        title: "algorithm",
+                        icon: "mdi-sync",
+                    },
+                ]
             },
             {
+                scale: "sub",
                 title: "Swift",
                 value: 25,
                 items: [
@@ -324,6 +374,7 @@ export default {
                 ]
             },
             {
+                scale: "sub",
                 title: "C#",
                 value: 25,
                 items: [
@@ -334,6 +385,7 @@ export default {
                 ]
             },
             {
+                scale: "sub",
                 title: "Vim",
                 value: 100,
                 items: [
@@ -344,38 +396,7 @@ export default {
                 ]
             },
             {
-                title: "Database",
-                value: 100,
-                items: [
-                    {
-                        title: "postgresql",
-                        icon: "mdi-database-search",
-                    },
-                    {
-                        title: "mysql",
-                        icon: "mdi-database-search",
-                    },
-                    {
-                        title: "sqlite",
-                        icon: "mdi-database-search",
-                    },
-                ]
-            },
-            {
-                title: "Shell",
-                value: 50,
-                items: [
-                    {
-                        title: "zsh",
-                        icon: "mdi-laptop",
-                    },
-                    {
-                        title: "bash",
-                        icon: "mdi-laptop",
-                    },
-                ]
-            },
-            {
+                scale: "sub",
                 title: 'Linux',
                 value: 50,
                 items: [
@@ -394,14 +415,68 @@ export default {
                 ]
             },
             {
-                title: 'Git',
-                subtitle: 'GitHub',
-                value: 75,
+                scale: "sub",
+                title: "Shell",
+                value: 50,
+                items: [
+                    {
+                        title: "zsh",
+                        icon: "mdi-laptop",
+                    },
+                    {
+                        title: "bash",
+                        icon: "mdi-laptop",
+                    },
+                ]
             },
             {
-                title: 'Docker',
-                subtitle: 'Docker Compose',
+                scale: "sub",
+                title: "Database",
+                value: 100,
+                items: [
+                    {
+                        title: "postgresql",
+                        icon: "mdi-database-search",
+                    },
+                    {
+                        title: "mysql",
+                        icon: "mdi-database-search",
+                    },
+                    {
+                        title: "sqlite",
+                        icon: "mdi-database-search",
+                    },
+                ]
+            },
+            {
+                scale: "sub",
+                title: 'Version',
                 value: 75,
+                items: [
+                    {
+                        title: "git",
+                        icon: "mdi-pencil",
+                    },
+                    {
+                        title: "github",
+                        icon: "mdi-pencil",
+                    },
+                ]
+            },
+            {
+                scale: "sub",
+                title: 'Container',
+                value: 75,
+                items: [
+                    {
+                        title: "docker",
+                        icon: "mdi-pencil",
+                    },
+                    {
+                        title: "docker-compose",
+                        icon: "mdi-pencil",
+                    },
+                ]
             },
         ]
     }),

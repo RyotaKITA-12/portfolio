@@ -10,16 +10,22 @@
         </v-app-bar>
 
         <v-main>
-            <v-container style="padding: 25px;">
-                <News v-if="page === 'NEWS'" />
-                <Skills v-if="page === 'SKILLS'" />
-                <Works v-if="page === 'WORKS'" />
-            </v-container>
+            <div v-if="page === 'ABOUT'">
+                <About />
+            </div>
+            <div v-else>
+                <v-container style="padding: 25px;">
+                    <News v-if="page === 'NEWS'" />
+                    <Skills v-if="page === 'SKILLS'" />
+                    <Works v-if="page === 'WORKS'" />
+                </v-container>
+            </div>
         </v-main>
     </v-app>
 </template>
 
 <script>
+import About from '@/components/About'
 import News from '@/components/News'
 import Skills from '@/components/Skills'
 import Works from '@/components/Works'
@@ -27,6 +33,7 @@ import Works from '@/components/Works'
 export default {
     name: 'Home',
     components: {
+        About,
         News,
         Skills,
         Works,
@@ -35,7 +42,6 @@ export default {
         page: "ABOUT",
         links: [
             'ABOUT',
-            'ACTIVITY',
             'NEWS',
             'SKILLS',
             'WORKS',

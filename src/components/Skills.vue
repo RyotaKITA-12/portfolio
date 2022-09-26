@@ -267,14 +267,6 @@ export default {
                         icon: "mdi-brain",
                     },
                     {
-                        title: "tensorflow",
-                        icon: "mdi-brain",
-                    },
-                    {
-                        title: "onnx",
-                        icon: "mdi-brain",
-                    },
-                    {
                         title: "Natural Language Processing",
                         icon: "mdi-text-box-outline",
                     },
@@ -299,6 +291,14 @@ export default {
                     {
                         title: "beego",
                         icon: "mdi-server",
+                    },
+                    {
+                        title: "tensorflow",
+                        icon: "mdi-brain",
+                    },
+                    {
+                        title: "onnx",
+                        icon: "mdi-brain",
                     },
                     {
                         title: "kagome",

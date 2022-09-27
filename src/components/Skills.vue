@@ -95,7 +95,7 @@ export default {
                     },
                     {
                         title: "Web Scraping",
-                        icon: "mdi-server",
+                        icon: "mdi-web",
                     },
                     {
                         title: "Data Analysis",
@@ -402,15 +402,15 @@ export default {
                 items: [
                     {
                         title: "arch-linux",
-                        icon: "mdi-laptop",
+                        icon: "mdi-linux",
                     },
                     {
                         title: "fedora",
-                        icon: "mdi-laptop",
+                        icon: "mdi-linux",
                     },
                     {
                         title: "elementary-os",
-                        icon: "mdi-laptop",
+                        icon: "mdi-linux",
                     },
                 ]
             },
@@ -421,11 +421,11 @@ export default {
                 items: [
                     {
                         title: "zsh",
-                        icon: "mdi-laptop",
+                        icon: "mdi-bash",
                     },
                     {
                         title: "bash",
-                        icon: "mdi-laptop",
+                        icon: "mdi-bash",
                     },
                 ]
             },
@@ -455,11 +455,11 @@ export default {
                 items: [
                     {
                         title: "git",
-                        icon: "mdi-pencil",
+                        icon: "mdi-git",
                     },
                     {
                         title: "github",
-                        icon: "mdi-pencil",
+                        icon: "mdi-git",
                     },
                 ]
             },
@@ -470,11 +470,11 @@ export default {
                 items: [
                     {
                         title: "docker",
-                        icon: "mdi-pencil",
+                        icon: "mdi-docker",
                     },
                     {
                         title: "docker-compose",
-                        icon: "mdi-pencil",
+                        icon: "mdi-docker",
                     },
                 ]
             },

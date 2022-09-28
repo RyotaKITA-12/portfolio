@@ -16,7 +16,7 @@
         <v-row justify="center">
             <v-col cols=9>
                 <v-card color="#121212" outlined tile>
-                    <v-card-title class="text-h4">
+                    <v-card-title class="text-h4 teal--text text--lighten-3">
                         EDUCATION
                     </v-card-title>
                     <br>
@@ -37,6 +37,27 @@
                         特に，ハッカソンでは数多くの賞を受賞．
                         <br>
                         また，学内交流会や勉強会を数多く企画・運営している．
+                    </v-card-text>
+                </v-card>
+                <div style="margin-top: 40px; margin-bottom: 20px;">
+                    <v-divider color="teal" />
+                </div>
+            </v-col>
+        </v-row>
+        <v-row justify="center">
+            <v-col cols=9>
+                <v-card color="#121212" outlined tile>
+                    <v-card-title class="text-h4 teal--text text--lighten-3">
+                        DEVICE
+                    </v-card-title>
+                    <br>
+                    <v-card-subtitle>
+                        <p class="text-h5"><b>MacBook Pro (16-inch, 2019)</b></p>
+                    </v-card-subtitle>
+                    <v-card-text>
+                        <p>2.3GHz 8コアIntel Core i9</p>
+                        <p>32 GB 2667 MHz DDR4</p>
+                        <p>AMD Radeon Pro 5500M 8 GB</p>
                     </v-card-text>
                 </v-card>
             </v-col>

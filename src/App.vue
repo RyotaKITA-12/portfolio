@@ -23,7 +23,7 @@ export default {
     mounted() {
         setTimeout(() => {
             this.loading = false
-        }, 700)
+        }, 800)
     }
 };
 </script>

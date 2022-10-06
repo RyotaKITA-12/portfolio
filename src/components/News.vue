@@ -16,7 +16,6 @@
         </v-timeline>
     </v-app>
 </template>
-
 <script>
 export default {
     data: () => ({

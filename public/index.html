@@ -3,16 +3,29 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,
+                                   initial-scale=1.0,
+                                   maximum-scale=1,
+                                   user-scalable=no">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+    <meta property="og:url" content="https://kt12.jp/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="KITA Ryota - portfolio">
+    <meta property="og:description" content="武蔵野大学データサイエンス学部2期生 北椋太(24卒)のポートフォリオ">
+    <meta property="og:site_name" content="KITA Ryota - portfolio">
+    <meta property="og:image" content="./img/web-icon.png">
+    <meta property="og:locale" content="ja_JP" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@dhs_1212">
+    <meta name="twitter:creator" content="@dhs_1212">
+
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="icon" type="image/png" href="./img/web-icon.png">
   </head>
   <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>

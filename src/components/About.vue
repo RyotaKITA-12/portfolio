@@ -13,6 +13,16 @@
             </v-row>
         </v-parallax>
         <div style="height: 5%;" />
+        <v-alert prominent color="#2A3B4D" style="margin-left: 10%; margin-right: 10%;">
+            <v-row align="center">
+                <v-col class="grow">
+                    本サイトは移行途中のため，一部情報が不足しています．
+                </v-col>
+                <v-col class="shrink">
+                    <v-btn href="https://ryotakita-12.github.io/portfolio2021/">旧サイトへ移動する</v-btn>
+                </v-col>
+            </v-row>
+        </v-alert>
         <v-row justify="center">
             <v-col cols=9>
                 <v-card color="#121212" outlined tile>

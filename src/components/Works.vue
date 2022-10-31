@@ -7,7 +7,7 @@
         <v-row align-content="center">
             <div v-for="content in contents2022" :key="content">
                 <v-col>
-                    <v-card height="250" width="265" :color="content.color">
+                    <v-card :href="content.link" height="250" width="265" :color="content.color">
                         <v-img :src="require(`@/assets/works/${content.image}`)" contain="true" height="155" />
                         <v-card-title>
                             <v-icon style="margin-right: 10px; margin-left: -5px; margin-top: -7px;">
@@ -90,6 +90,7 @@ export default {
             {
                 title: "CurriCreate",
                 story: "データベースデザイン 課題",
+                link: "https://github.com/RyotaKITA-12/curriCreate",
                 image: "curriculum.png",
                 icon: "mdi-school",
                 color: "indigo darken-1",
@@ -97,6 +98,7 @@ export default {
             {
                 title: "FU-CALENDAR",
                 story: "技育展2022 (株式会社サポーターズ)",
+                link: "https://github.com/RyotaKITA-12/fu-calendar",
                 image: "fu-calendar.png",
                 icon: "mdi-calendar",
                 color: "indigo darken-1",
@@ -104,6 +106,7 @@ export default {
             {
                 title: "preGen",
                 story: "技育CAMP オンライン開発合宿 ...",
+                link: "https://github.com/RyotaKITA-12/pregen",
                 image: "pregen.png",
                 icon: "mdi-presentation",
                 color: "indigo darken-1",
@@ -111,6 +114,7 @@ export default {
             {
                 title: "Hack-a-Matcher",
                 story: "技育CAMP オンライン開発合宿 ...",
+                link: "https://github.com/RyotaKITA-12/hack-a-matcher",
                 image: "hack-a-matcher.png",
                 icon: "mdi-link-variant",
                 color: "indigo darken-1",
@@ -118,6 +122,7 @@ export default {
             {
                 title: "FU CALENDAR",
                 story: "技育CAMP オンライン開発合宿 ...",
+                link: "https://github.com/RyotaKITA-12/fucalendar",
                 image: "fucalendar.png",
                 icon: "mdi-calendar",
                 color: "indigo darken-1",
@@ -127,6 +132,7 @@ export default {
             {
                 title: "Gazeat",
                 story: "Open Hack U 2021 Online Vol.4",
+                link: "https://github.com/orgs/Yuju-Fudan/repositories",
                 image: "gazeat.png",
                 icon: "mdi-puzzle",
                 color: "indigo darken-1",
@@ -155,6 +161,7 @@ export default {
             {
                 title: "金魚すくわれ",
                 story: "お盆deハッカソン (株式会社 TeckB...",
+                link: "https://github.com/Upset-MUDS",
                 image: "kingyo.png",
                 icon: "mdi-fish",
                 color: "indigo darken-1",
